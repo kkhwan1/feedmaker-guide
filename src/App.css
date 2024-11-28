@@ -1,0 +1,31 @@
+/* 로딩 스피너 스타일 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.loading-spinner {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 성능 최적화를 위한 CSS 속성 */
+.keyword-item {
+  will-change: transform;
+  transition: transform 0.2s ease;
+}
+
+.keyword-item:hover {
+  transform: translateY(-2px);
+}
+
+/* 애니메이션 최적화 */
+@media (prefers-reduced-motion: reduce) {
+  .keyword-item {
+    transition: none;
+  }
+} 

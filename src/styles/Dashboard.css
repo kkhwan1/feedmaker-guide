@@ -1,0 +1,181 @@
+.dashboard-container {
+  margin: 20px 0;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.dashboard-card.active {
+  border: 2px solid #1a73e8;
+}
+
+.card-content {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.mission-status .status-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #f0f2f5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  background: #1a73e8;
+  transition: width 0.3s ease;
+}
+
+.popular-keywords ol {
+  padding-left: 20px;
+}
+
+.popular-keywords li {
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.activity-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+.hashtag-guide, .activity-guidelines {
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.guide-item, .guideline-item {
+  margin-bottom: 15px;
+}
+
+.guide-item h4, .guideline-item h4 {
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.guide-item ul, .guideline-item ul {
+  padding-left: 20px;
+}
+
+.guide-item li, .guideline-item li {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.keyword-stats .category-section {
+  margin-bottom: 15px;
+}
+
+.keyword-stats h4 {
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.keyword-tag {
+  background: #e3f2fd;
+  color: #1a73e8;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.awards-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.awards-info {
+  flex: 1;
+}
+
+.awards-info h4 {
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.awards-info ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.current-rank {
+  text-align: center;
+  padding: 15px;
+  background: #e3f2fd;
+  border-radius: 8px;
+}
+
+.rank-label {
+  display: block;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.rank-value {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-status {
+    flex-direction: column;
+  }
+
+  .current-rank {
+    margin-top: 15px;
+    width: 100%;
+  }
+} 
