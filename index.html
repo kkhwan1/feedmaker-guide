@@ -18,10 +18,14 @@
 <body class="markdown-body">
     <div id="content"></div>
     <script>
-        fetch('question.md')
+        fetch('./question.md')
             .then(response => response.text())
             .then(text => {
                 document.getElementById('content').innerHTML = marked.parse(text);
+            })
+            .catch(error => {
+                console.error('Error loading markdown:', error);
+                document.getElementById('content').innerHTML = 'Error loading content';
             });
     </script>
 </body>
